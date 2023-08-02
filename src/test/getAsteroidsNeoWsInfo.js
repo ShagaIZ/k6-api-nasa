@@ -1,5 +1,5 @@
 import http from 'k6/http';
-import { sleep } from 'k6';
+import { check, sleep } from 'k6';
 import { BASE_URL } from '../../common/urls.js';
 import { PERSONAL_TOKEN } from '../../common/token.js';
 
@@ -15,6 +15,8 @@ const endDate = '2022-12-03'
 
 
 export default function () {
-  http.get(`${BASE_URL}neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${PERSONAL_TOKEN}`);
-  sleep(1);
+  let response = http.get(`${BASE_URL}neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${PERSONAL_TOKEN}`);
+  check(response, {
+    'status code is 200': (res) => res.status === 200
+  })
 }
