@@ -1,7 +1,7 @@
 import http from 'k6/http';
 import { sleep } from 'k6';
-import { APOD_URL, BASE_URL } from './common/urls.js';
-import { DEMO_KEY } from './common/token.js';
+import { APOD_URL, BASE_URL } from '../../common/urls.js';
+import { DEMO_KEY } from '../../common/token.js';
 
 
 export const options = {
