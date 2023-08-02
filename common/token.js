@@ -1,1 +1,0 @@
-export const DEMO_KEY = 'DEMO_KEY'
