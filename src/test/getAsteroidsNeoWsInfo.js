@@ -2,14 +2,10 @@ import http from 'k6/http';
 import { check, sleep } from 'k6';
 import { BASE_URL } from '../../common/urls.js';
 import { PERSONAL_TOKEN } from '../../common/token.js';
+import { mainOptions } from '../../mainLoadOptions.js';
 
 
-export const options = {
-  stages: [
-    { duration: '3s', target: 2 },
-    { duration: '1s', target: 1 },
-  ],
-}
+export const options = mainOptions
 const startDate = '2022-12-02'
 const endDate = '2022-12-03'
 
