@@ -5,7 +5,12 @@ import { DEMO_KEY } from '../../common/token.js';
 import { optionsGetPlanetInfo } from '../../mainLoadOptions.js';
 
 
-export const options = optionsGetPlanetInfo
+export const options = {
+  stages: [
+    { duration: '5s', target: 2 },
+    { duration: '1s', target: 1 },
+  ],
+}
 
 
 export default function () {
