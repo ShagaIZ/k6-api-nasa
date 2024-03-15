@@ -16,6 +16,7 @@ const endDate = '2022-12-03'
 export default function () {
   let response = getInfoAsteroid(startDate, endDate);
   check(response, {
-    'status code is 200': (res) => res.status === 200
+    'status code is 200': (res) => res.status === 200,
+    'response time less than 500 ms': (res) => res.timings.receiving < 500
   })
 }

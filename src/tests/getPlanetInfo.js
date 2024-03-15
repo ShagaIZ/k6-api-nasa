@@ -14,6 +14,7 @@ const apod = 'apod'
 export default function () {
  let response =  getPlanetInfo(apod)
   check(response, {
-    'status code is 200': (res) => res.status === 200
+    'status code is 200': (res) => res.status === 200,
+    'response time less than 500 ms': (res) => res.timings.receiving < 500
   })
 }
