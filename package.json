@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "load:get_planet": "dotenv -e .env.base cross-env K6_WEB_DASHBOARD_EXPORT=./results/getPlanetInfo.html \"k6 run src/tests/getPlanetInfo.js\"",
+    "load:get_asteroid_neo": "dotenv -e .env.base cross-env K6_WEB_DASHBOARD_EXPORT=./results/getAsteroidNeoInfo.html \"k6 run src/tests/getAsteroidNeoInfo.js\""
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.4.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
