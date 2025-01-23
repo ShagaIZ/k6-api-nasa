@@ -4,9 +4,11 @@ import { getInfoAsteroid } from '../../executors/asteroidNeoInfo.js';
 
 
 export const options = {
+  executor: 'ramping-vus',
+  startVUs: 0,
   stages: [
-    { duration: '3s', target: 2 },
-    { duration: '1s', target: 1 },
+    { duration: '30s', target: 2 },
+    { duration: '10s', target: 1 },
   ],
 }
 const startDate = '2022-12-02'

@@ -3,9 +3,11 @@ import { getPlanetInfo } from '../../executors/planetInfo.js';
 
 
 export const options = {
+  executor: 'ramping-vus',
+  startVUs: 0,
   stages: [
-    { duration: '5s', target: 2 },
-    { duration: '1s', target: 1 },
+    { duration: '50s', target: 2 },
+    { duration: '10s', target: 1 },
   ],
 }
 
