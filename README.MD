@@ -1,13 +1,14 @@
-# K6.IO
-## Load testing tool
+# K6.IO  
+## Load Testing Tool  
 
+This project contains a small set of endpoints from the free NASA API. Check it out [here](https://api.nasa.gov/).  
 
-It is project contains small of the piece endpoints of free NASA API. Look at [here](https://api.nasa.gov/)
+The examples of load scripts in the repository allow you to test the API's capability to handle system load.  
 
-Examples of the load scripts in repo allow to check capability API to handle load on a system. 
+Additionally, after running the scripts, you can generate an HTML report with the results of the performance tests.  
 
-### Commands
+### Commands  
 
 ```sh
-k6 run {file-name}
-```
+npm run {script-name}  
+# Example: npm run load:get_planet  
